@@ -22,15 +22,17 @@ export function Layout({ children, active }: LayoutProps) {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-8">
           <Link
             to="/"
-            className="flex items-center gap-2 text-lg font-semibold tracking-tight text-white"
+            className="flex min-w-0 items-center gap-2 text-lg font-semibold tracking-tight text-white"
           >
-            <span className="rounded-full border border-emerald-400/40 bg-emerald-400/10 p-2 text-emerald-300">
+            <span className="shrink-0 rounded-full border border-emerald-400/40 bg-emerald-400/10 p-2 text-emerald-300">
               <Sparkles size={16} />
             </span>
-            Okoro<span className="text-emerald-400">Chukwuebuka</span>
+            <span className="min-w-0 break-words">
+              Okoro<span className="text-emerald-400">Chukwuebuka</span>
+            </span>
           </Link>
           <nav className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
             {links.map((link) => (
@@ -55,7 +57,7 @@ export function Layout({ children, active }: LayoutProps) {
             Hire Me <ArrowUpRight size={16} />
           </motion.a>
           <button
-            className="rounded-full border border-white/10 p-2 text-slate-200 md:hidden"
+            className="shrink-0 rounded-full border border-white/10 p-2 text-slate-200 md:hidden"
             aria-label="Open navigation"
           >
             <Menu size={18} />
@@ -65,11 +67,11 @@ export function Layout({ children, active }: LayoutProps) {
       {children}
       <footer className="border-t border-white/10 bg-slate-950/70">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-400 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-          <p>
+          <p className="min-w-0 break-words">
             © 2026 Okoro Chukwuebuka. Building premium web experiences for
             founders and businesses.
           </p>
-          <div className="flex gap-4">
+          <div className="flex shrink-0 gap-4">
             <a href="https://github.com" className="hover:text-white">
               GitHub
             </a>

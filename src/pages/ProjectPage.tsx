@@ -38,10 +38,10 @@ function ProjectPage() {
             <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-400">
               {project.category}
             </p>
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+            <h1 className="mt-4 break-words text-4xl font-semibold tracking-tight text-white sm:text-5xl">
               {project.title}
             </h1>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-400">
+            <p className="mt-6 max-w-3xl break-words text-lg leading-8 text-slate-400">
               {project.summary}
             </p>
             <div className="mt-8 flex flex-wrap gap-4">

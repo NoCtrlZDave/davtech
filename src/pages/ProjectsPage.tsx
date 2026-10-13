@@ -4,25 +4,29 @@ import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 import { PageHero } from "../components/PageHero";
 import { ProjectCard } from "../components/ProjectCard";
-import { projects } from "../data/projects";
+import { projects, type ProjectItem } from "../data/projects";
 import { useGitHubRepos } from "../hooks/useGitHubRepos";
 
 function ProjectsPage() {
   const { data: repos, isLoading, error } = useGitHubRepos();
 
-  const projectList = (repos && repos.length > 0 ? repos : projects).map(
-    (repo) => ({
-      id: repo.id?.toString() || "repo",
-      name: repo.name || "Repository",
-      description: repo.description || "A project from my GitHub profile.",
-      category: "GitHub",
-      image: "/projects/placeholder.png",
-      github: repo.html_url,
-      demo: repo.homepage || undefined,
-      tech: [repo.language || "Code"],
-      featured: true,
-    }),
-  );
+  const projectList: ProjectItem[] =
+    repos && repos.length > 0
+      ? repos.map((repo) => ({
+          id: repo.id.toString(),
+          name: repo.name,
+          description: repo.description || "A project from my GitHub profile.",
+          category: "GitHub",
+          image:
+            repo.full_name && !/[\s?#]/.test(repo.full_name)
+              ? `https://opengraph.githubassets.com/1/${repo.full_name}`
+              : "/projects/placeholder.svg",
+          github: repo.html_url,
+          demo: repo.homepage || undefined,
+          tech: [repo.language || "Code"],
+          featured: true,
+        }))
+      : projects;
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">

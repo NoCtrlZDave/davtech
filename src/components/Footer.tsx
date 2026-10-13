@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-slate-950/70">
       <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-8 text-sm text-slate-400 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-        <div>
+        <div className="min-w-0 break-words">
           <p className="font-semibold text-white">Okoro Chukwuebuka</p>
           <p>
             Building premium web experiences for businesses, founders, and

@@ -19,7 +19,7 @@ export function ContactForm() {
           Name
           <input
             required
-            className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none ring-0"
+            className="mt-2 w-full min-w-0 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none ring-0"
             placeholder="Your name"
           />
         </label>
@@ -28,7 +28,7 @@ export function ContactForm() {
           <input
             required
             type="email"
-            className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none ring-0"
+            className="mt-2 w-full min-w-0 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none ring-0"
             placeholder="you@example.com"
           />
         </label>
@@ -37,7 +37,7 @@ export function ContactForm() {
         Subject
         <input
           required
-          className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none ring-0"
+          className="mt-2 w-full min-w-0 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none ring-0"
           placeholder="Project inquiry"
         />
       </label>
@@ -46,7 +46,7 @@ export function ContactForm() {
         <textarea
           required
           rows={5}
-          className="mt-2 min-h-28 w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none ring-0"
+            className="mt-2 min-h-28 w-full min-w-0 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none ring-0"
           placeholder="Tell me about your idea"
         />
       </label>

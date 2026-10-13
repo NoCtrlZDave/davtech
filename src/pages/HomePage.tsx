@@ -32,21 +32,21 @@ function HomePage() {
       <main>
         <section className="relative overflow-hidden px-6 py-20 lg:px-8 lg:py-28">
           <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.18),_transparent_35%),radial-gradient(circle_at_80%_20%,_rgba(59,130,246,0.16),_transparent_25%)]" />
-          <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.45 }}
-              className="max-w-3xl"
+              className="min-w-0 max-w-3xl"
             >
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-2 text-sm text-emerald-300">
                 <BadgeCheck size={16} />
                 Available for freelance, full-time, and agency collaborations
               </div>
-              <h1 className="text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
+              <h1 className="break-words text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
                 I build fast, modern websites that help businesses grow.
               </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-400">
+              <p className="mt-6 max-w-2xl break-words text-lg leading-8 text-slate-400">
                 I’m Okoro Chukwuebuka, a frontend developer and founder of
                 Solosia Digital. I turn business goals into high-converting web
                 experiences with clean code, careful UX, and modern React
@@ -81,26 +81,28 @@ function HomePage() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="relative"
+              className="relative min-w-0"
             >
               <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-emerald-400/20 to-sky-400/10 blur-3xl" />
               <div className="relative rounded-[2rem] border border-white/10 bg-slate-900/80 p-6 shadow-2xl shadow-emerald-500/10">
                 <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/80 p-5">
-                  <div className="flex items-center justify-between">
-                    <div>
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="min-w-0">
                       <p className="text-sm text-slate-400">Developer Focus</p>
-                      <p className="text-lg font-semibold text-white">
+                      <p className="break-words text-lg font-semibold text-white">
                         Business-first frontend engineering
                       </p>
                     </div>
-                    <div className="rounded-full border border-emerald-400/40 bg-emerald-400/10 p-2 text-emerald-300">
+                    <div className="shrink-0 rounded-full border border-emerald-400/40 bg-emerald-400/10 p-2 text-emerald-300">
                       <Code2 size={18} />
                     </div>
                   </div>
                   <div className="mt-6 rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 to-slate-800 p-4">
                     <div className="flex items-center gap-3 text-sm text-slate-400">
-                      <BrainCircuit size={16} className="text-emerald-400" />
-                      <span>React • TypeScript • Tailwind • Vite</span>
+                      <BrainCircuit size={16} className="shrink-0 text-emerald-400" />
+                      <span className="min-w-0 break-words">
+                        React • TypeScript • Tailwind • Vite
+                      </span>
                     </div>
                     <div className="mt-4 grid grid-cols-2 gap-3">
                       {[
@@ -111,23 +113,23 @@ function HomePage() {
                       ].map((chip) => (
                         <div
                           key={chip}
-                          className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-300"
+                          className="break-words rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-300"
                         >
                           {chip}
                         </div>
                       ))}
                     </div>
                   </div>
-                  <div className="mt-6 flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <div>
+                  <div className="mt-6 flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-white/5 p-4">
+                    <div className="min-w-0">
                       <p className="text-sm text-slate-400">
                         GitHub contribution preview
                       </p>
-                      <p className="text-xl font-semibold text-white">
+                      <p className="break-words text-xl font-semibold text-white">
                         Consistent build streak
                       </p>
                     </div>
-                    <div className="text-emerald-300">●●●●●</div>
+                    <div className="shrink-0 text-emerald-300">●●●●●</div>
                   </div>
                 </div>
               </div>
@@ -137,13 +139,13 @@ function HomePage() {
 
         <section id="about" className="px-6 py-20 lg:px-8">
           <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 lg:p-12">
-            <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+            <div className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">
               <SectionHeading
                 eyebrow="About"
                 title="I combine engineering depth with business clarity."
                 description="My work is rooted in real product thinking: I care about how a site performs, how it feels, and how it helps a business grow."
               />
-              <div className="space-y-6 text-lg text-slate-400">
+              <div className="min-w-0 space-y-6 break-words text-lg text-slate-400">
                 <p>
                   I’m a final-year Computer Engineering student with a growing
                   track record of building polished frontend experiences for
@@ -229,9 +231,9 @@ function HomePage() {
                   <p className="mt-3 text-slate-400">{service.description}</p>
                   <ul className="mt-5 space-y-2 text-sm text-slate-300">
                     {service.benefits.map((benefit) => (
-                      <li key={benefit} className="flex items-center gap-2">
-                        <Zap size={14} className="text-emerald-400" />
-                        {benefit}
+                      <li key={benefit} className="flex items-start gap-2">
+                        <Zap size={14} className="mt-1 shrink-0 text-emerald-400" />
+                        <span className="min-w-0 break-words">{benefit}</span>
                       </li>
                     ))}
                   </ul>
@@ -255,21 +257,26 @@ function HomePage() {
                   className="rounded-[1.25rem] border border-white/10 bg-slate-950/70 p-6"
                 >
                   <div className="flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between">
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-sm font-medium text-emerald-400">
                         {item.type}
                       </p>
-                      <h3 className="text-xl font-semibold text-white">
+                      <h3 className="break-words text-xl font-semibold text-white">
                         {item.title}
                       </h3>
                     </div>
-                    <p className="text-sm text-slate-400">{item.period}</p>
+                    <p className="shrink-0 text-sm text-slate-400">
+                      {item.period}
+                    </p>
                   </div>
                   <ul className="mt-4 space-y-2 text-slate-400">
                     {item.details.map((detail) => (
-                      <li key={detail} className="flex gap-2">
-                        <Sparkles size={14} className="mt-1 text-emerald-400" />
-                        {detail}
+                      <li key={detail} className="flex items-start gap-2">
+                        <Sparkles
+                          size={14}
+                          className="mt-1 shrink-0 text-emerald-400"
+                        />
+                        <span className="min-w-0 break-words">{detail}</span>
                       </li>
                     ))}
                   </ul>
@@ -373,15 +380,15 @@ function HomePage() {
 
         <section id="contact" className="px-6 py-20 lg:px-8">
           <div className="mx-auto max-w-7xl rounded-[2rem] border border-emerald-400/20 bg-gradient-to-br from-emerald-400/10 to-sky-400/10 p-8 lg:p-12">
-            <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-              <div>
+            <div className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+              <div className="min-w-0">
                 <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-400">
                   Contact
                 </p>
-                <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                <h2 className="mt-3 break-words text-3xl font-semibold tracking-tight text-white sm:text-4xl">
                   Let’s build something that feels as strong as it performs.
                 </h2>
-                <p className="mt-5 text-lg text-slate-400">
+                <p className="mt-5 break-words text-lg text-slate-400">
                   I’m available for freelance projects, full-time roles, and
                   agency collaborations.
                 </p>
@@ -412,27 +419,27 @@ function HomePage() {
                   </a>
                 </div>
               </div>
-              <form className="rounded-[1.5rem] border border-white/10 bg-slate-950/70 p-6">
+              <form className="min-w-0 rounded-[1.5rem] border border-white/10 bg-slate-950/70 p-6">
                 <div className="grid gap-4 sm:grid-cols-2">
-                  <label className="text-sm text-slate-400">
+                  <label className="min-w-0 text-sm text-slate-400">
                     Name
                     <input
-                      className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-3 py-3 text-white outline-none ring-0"
+                      className="mt-2 w-full min-w-0 rounded-xl border border-white/10 bg-white/5 px-3 py-3 text-white outline-none ring-0"
                       placeholder="Your name"
                     />
                   </label>
-                  <label className="text-sm text-slate-400">
+                  <label className="min-w-0 text-sm text-slate-400">
                     Email
                     <input
-                      className="mt-2 w-full rounded-xl border border-white/10 bg-white/5 px-3 py-3 text-white outline-none ring-0"
+                      className="mt-2 w-full min-w-0 rounded-xl border border-white/10 bg-white/5 px-3 py-3 text-white outline-none ring-0"
                       placeholder="you@example.com"
                     />
                   </label>
                 </div>
-                <label className="mt-4 block text-sm text-slate-400">
+                <label className="mt-4 block min-w-0 text-sm text-slate-400">
                   Project brief
                   <textarea
-                    className="mt-2 min-h-32 w-full rounded-xl border border-white/10 bg-white/5 px-3 py-3 text-white outline-none ring-0"
+                    className="mt-2 min-h-32 w-full min-w-0 rounded-xl border border-white/10 bg-white/5 px-3 py-3 text-white outline-none ring-0"
                     placeholder="Tell me about your product or website goal."
                   />
                 </label>

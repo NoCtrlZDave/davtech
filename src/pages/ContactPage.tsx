@@ -38,12 +38,12 @@ function ContactPage() {
           title="Let’s build something thoughtful, modern, and effective."
           description="I’m available for freelance work, full-time roles, and product collaborations. Let’s talk about your next build."
         />
-        <div className="mt-12 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="mt-12 grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="rounded-[1.5rem] border border-white/10 bg-slate-900/70 p-8"
+            className="min-w-0 rounded-[1.5rem] border border-white/10 bg-slate-900/70 p-8"
           >
             <h2 className="text-2xl font-semibold text-white">Reach out</h2>
             <p className="mt-4 text-slate-400">

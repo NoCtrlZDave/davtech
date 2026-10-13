@@ -39,10 +39,10 @@ function BlogPage() {
           description="This blog section is ready for future articles and can be expanded easily with real posts later."
         />
         <div className="mt-10 flex flex-col gap-4 rounded-[1.5rem] border border-white/10 bg-slate-900/70 p-5 lg:flex-row lg:items-center lg:justify-between">
-          <div className="flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-slate-300">
-            <Search size={16} />
+          <div className="flex min-w-0 flex-1 items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-slate-300">
+            <Search size={16} className="shrink-0" />
             <input
-              className="w-full bg-transparent text-sm outline-none"
+              className="w-full min-w-0 bg-transparent text-sm outline-none"
               placeholder="Search articles"
             />
           </div>
@@ -96,10 +96,10 @@ function BlogPage() {
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <input
-              className="rounded-full border border-white/10 bg-slate-950/70 px-4 py-3 text-white outline-none"
+              className="w-full min-w-0 flex-1 rounded-full border border-white/10 bg-slate-950/70 px-4 py-3 text-white outline-none"
               placeholder="Enter your email"
             />
-            <button className="rounded-full bg-emerald-400 px-5 py-3 font-medium text-slate-950">
+            <button className="shrink-0 rounded-full bg-emerald-400 px-5 py-3 font-medium text-slate-950">
               Notify me
             </button>
           </div>

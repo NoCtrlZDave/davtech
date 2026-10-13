@@ -28,19 +28,21 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </div>
       <div className="p-6">
         <div className="flex items-center justify-between gap-3">
-          <h3 className="text-xl font-semibold text-white">{project.name}</h3>
-          <span className="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-300">
+          <h3 className="min-w-0 break-words text-xl font-semibold text-white">
+            {project.name}
+          </h3>
+          <span className="shrink-0 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-300">
             {project.category}
           </span>
         </div>
-        <p className="mt-3 text-sm leading-7 text-slate-400">
+        <p className="mt-3 break-words text-sm leading-7 text-slate-400">
           {project.description}
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
           {project.tech.map((tech) => (
             <span
               key={tech}
-              className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300"
+              className="break-words rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300"
             >
               {tech}
             </span>

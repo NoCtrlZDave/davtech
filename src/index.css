@@ -21,8 +21,10 @@ html {
 body {
     margin: 0;
     min-width: 320px;
+    max-width: 100%;
     min-height: 100vh;
     background: #020617;
+    overflow-wrap: break-word;
 }
 
 * {
@@ -30,6 +32,7 @@ body {
 }
 
 #root {
+    width: 100%;
     min-height: 100vh;
 }
 

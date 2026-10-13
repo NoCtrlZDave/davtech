@@ -37,12 +37,12 @@ function AboutPage() {
             </a>
           }
         />
-        <div className="mt-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="mt-12 grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
           <motion.section
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="rounded-[1.5rem] border border-white/10 bg-slate-900/70 p-8"
+            className="min-w-0 rounded-[1.5rem] border border-white/10 bg-slate-900/70 p-8"
           >
             <SectionTitle
               eyebrow="Biography"
@@ -64,7 +64,7 @@ function AboutPage() {
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="rounded-[1.5rem] border border-white/10 bg-gradient-to-br from-emerald-400/10 to-sky-400/10 p-8"
+            className="min-w-0 rounded-[1.5rem] border border-white/10 bg-gradient-to-br from-emerald-400/10 to-sky-400/10 p-8"
           >
             <div className="flex items-center gap-3 text-emerald-300">
               <BrainCircuit size={18} />{" "}
